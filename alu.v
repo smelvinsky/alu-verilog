@@ -1,6 +1,6 @@
 
 /* 
- * ALU Verilog example
+ * ALU Verilog example (iverilog 10.1)
  *
  * Instruction set:
  * |---- OPCODE ----|         |----- OPERATION -----|
@@ -102,7 +102,7 @@
                     status_reg[3] <= 1'b0; 
 
                 /* parity flag */
-                status_reg[1] = ~^a;
+                status_reg[1] = ~^result[7:0];
 
                 /* compare flag */
                 if (a >= b)
